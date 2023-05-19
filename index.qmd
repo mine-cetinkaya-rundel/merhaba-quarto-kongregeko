@@ -17,7 +17,7 @@ editor: visual
 
 [Merhaba Quarto]{.custom-title}
 
-[KongreGeko 2022]{.custom-subtitle}
+[KongreGeko 2023]{.custom-subtitle}
 
 [mine çetinkaya-rundel]{.custom-author}
 
@@ -182,9 +182,7 @@ Bu konusmanin orijinalini beraber hazirladigim Julia Stewart Lowndes'a ve illust
 
 -   Quarto documentation: [quarto.org](https://quarto.org/)
 
--   Video: [Reproducible authoring with Quarto](https://youtu.be/6p4vOKS6Xls)
-
--   Video: [Openscapes: Hello Quarto with NASA Openscapes, RLadies Santa Barbara, and JJ Allaire](https://youtu.be/azVAl343CIU)
+-   Video: [Getting Started with Quarto](https://youtu.be/_f3latmOhew)
 
 -   Tutorial: [rstudio-conf-2022.github.io/get-started-quarto/](https://rstudio-conf-2022.github.io/get-started-quarto/)
 
