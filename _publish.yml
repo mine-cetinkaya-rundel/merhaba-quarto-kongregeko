@@ -1,0 +1,4 @@
+- source: index.qmd
+  quarto-pub:
+    - id: 14bc7675-73bc-41cb-88ee-269a1a40a748
+      url: 'https://mine.quarto.pub/merhaba-quarto'

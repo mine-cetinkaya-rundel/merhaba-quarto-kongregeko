@@ -1,0 +1,98 @@
+# Collaborate {.title-top-ice background-image="images/horst_penguins_telescope.png" aria-label="Bir kar manzarasında başka bir penguenin omuzlarında duran bir penguen, gece gökyüzünde bir Quarto logo ayına teleskopla bakıyor."}
+
+::: notes
+Benim projelerim ve eminim çoğunuzun da projeleri ortak çalışmaya dayalıdır.
+:::
+
+##  {#many-use-python .center .centered data-menu-title="Many use Python" background-color="#0F1620"}
+
+[Birçok bilim insanı <br> Python kullanıyor<br> 😬]{.larger}
+
+::: notes
+Birçok bilim insanı python ve jupyter defterleri kullanır. Bu nedenle, işbirlikleriniz diller arasında gezinmeyi içerebilir, ancak muhtemelen Python'u yalnızca bir işbirliği için sıfırdan öğrenmek istemiyorsunuz.
+Ek olarak, bir R Markdown kullanıcısıysanız, çalışmanızı R Markdown'da tutmak için zaten retiküle aracılığıyla Python kodunu çalıştırıyor olabilirsiniz veya diller arası işbirliklerinizde R Markdown yazma deneyiminden vazgeçmeniz gerektiğini hissediyor olabilirsiniz. Jupyter not defterleri, yeniden üretilebilir yazma için bariz bir yer ve Python kullanıcılarının kendilerini özellikle evlerinde hissettikleri bir yer. Ve bir bilgi işlem ortamında kendinizi "evinizde" hissettiğinizde, yalnızca işbirliği amacıyla nadiren oradan ayrılmak istersiniz ve bunun yerine, yalnızca ortak çalışanınızla birlikte onlarınkini bırakıp sizinkine gelirsiniz.
+:::
+
+## Quarto biden fazla kodlama dilini bir araya getiren<br>projelere olanak tanır {.takeaway .center highlight-style="github"}
+
+\
+
+::: {.code-file .sourceCode .cell-code}
+{{< fa file >}} _quarto.yml
+:::
+
+``` {.yaml code-line-numbers="2,4,8,11"}
+contents:
+  - section: in-development/index.qmd
+    contents:
+      - in-development/earthdata-access-demo.ipynb
+      - in-development/nsidc/icesat2-cmr-onprem-vs-cloud.ipynb
+      - in-development/lpdaac/lpdaac_ecostress_lste_kerchunk.ipynb
+      - in-development/matlab-aws.qmd
+      - in-development/earthdata-python-r-handoff.rmd  
+  - section: contributing/onboarding.qmd
+    contents: 
+      - contributing/quarto-website-tutorial.md
+```
+
+::: notes
+Quarto, kodlama dilleri arasında işbirliğine olanak tanır. Bu, farklı dosya türlerini bir araya getiren bir YAML'in basitleştirilmiş bir görünümüdür. Gordugunuz gibi coğunlukla ipynbs Jupyter notebooklari var ama qmd, rmd, ve md dosyalari da var.
+:::
+
+## Quarto mevcut IDElerinizden<br>katkıda bulunmayı sağlar {.takeaway .center}
+
+::: centered
+::: columns
+::: {.column width="45%"}
+::: borderbox
+![](images/2-collaborate/tools-rstudio-ide.png){fig-alt="RStudio IDE'nin ekran görüntüsü" width="80%"}
+:::
+:::
+
+::: {.column width="45%"}
+::: borderbox
+![](images/2-collaborate/tools-jupyterhub.png){fig-alt="Jupyter Lab ekran görüntüsü" width="80%"}
+:::
+:::
+:::
+
+::: columns
+::: {.column width="45%"}
+::: borderbox
+![](images/2-collaborate/tools-github-ide.png){fig-alt="GitHub IDE ekran görüntüsü" width="80%"}
+:::
+:::
+
+::: {.column width="45%"}
+::: borderbox
+![](images/2-collaborate/tools-vscode-ide.png){fig-alt="VS Code IDE ekran görüntüsü" width="80%"}
+:::
+:::
+:::
+:::
+
+::: notes
+Quarto ile, RStudio IDE, JupyterLab, VS Code veya doğrudan GitHub'da belge düzenleme gibi, zaten rahat olduğunuz herhangi bir araçtan katkıda bulunabilirsiniz.
+
+Bu çok önemli çünkü bilim yapmak zaten zorlayıcı ve insanların çalışmaya katılabilmeleri için yazılım araçlarını değiştirmelerine de ihtiyacımız yok.
+
+Simdi de Jupyter ve Quarto nasil beraber Size kulliliyor bir ona bakalim.
+:::
+
+##  {#demo-collaborate .center data-menu-title="Demo: Collaborate" background-color="#FFFFFF"}
+
+```{=html}
+<script src="https://fast.wistia.com/embed/medias/dfyjy1v1aw.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_dfyjy1v1aw videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/dfyjy1v1aw/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+```
+
+::: notes
+-   Orient to JupyterLab. This is a JupyterHub managed by our collaborators at 2i2c
+-   Open Mine's example site, quarto preview
+- add .ipynb 
+-   Add `.ipynb` to `_quarto.yml`
+-   View website - new page is added to website
+-  Add fig captions
+- margin plots: a style preferred by many now in jupyter notebook
+
+Çoklu dil desteğinin öğretim için de bircok etkileri vardır. O yüzden şimdi biraz da öğretimden bahsedelim.
+:::

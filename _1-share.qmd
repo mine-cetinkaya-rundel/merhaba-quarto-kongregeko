@@ -1,0 +1,285 @@
+# Share {.title-middle-dark background-image="images/horst_quarto_penguins_share.png" aria-label="Karlı bir manzarada birlikte selfie çeken iki mutlu penguen."}
+
+::: notes
+Share, yani paylasim, ile baslayalim.
+:::
+
+##  {#share-intro .center data-menu-title="Share Intro"}
+
+::: columns
+::: {.column width="70%"}
+![](images/1-share/mine-venn.svg){fig-alt="Eğitim, araştırma ve geliştirme olmak üzere üç daireli bir Venn diyagramı. Kavşakta şefkat kelimesiyle mavi bir kalp var."}
+:::
+
+::: {.column width="30%"}
+![](images/horst_penguins_nametag_mine.png){fig-alt="Ad etiketi yazan penguen: \"Mine\""}
+:::
+:::
+
+::: notes
+Ben eğitim, araştırma ve geliştirmenin kesiştiği noktada çalışıyorum.
+
+Eğitimci kelimesi size 7/24 öğrencilerin önünde ders verdigimi düşündürebilir, ama gerçekte, zamanımın çoğunu bilgisayarımın başında yazarak ve insanlarla çeşitli şekillerde paylaşmak için materyaller oluşturarak geçiriyorum.
+Yarattığım her ne ise, hepsini açık bir şekilde - yani ücretsiz kullanıma, yeniden kullanıma ve uyarlamaya izin veren açık bir lisansla - paylaşıyorum.
+Çoğu zaman daha geniş erişim için "önce web"i düşünürüm, ancak yine de geleneksel dergi yayıncılığının ve akademinin sınırları içinde yaşıyorum, bu da düzenli olarak çalışmamın PDF sürümlerini oluşturmam gerektiği anlamına geliyor.
+
+Bu nedenle, hem kod hem de metin içeren tek bir kaynaktan birden çok türde çıktıya izin veren bir yazim sistemi, bana zaman kazandirmasinin otesinde, temel bir gerek haline gelmistir artik benim icin.
+Ve son on yılda benim için bu araç R Markdown oldu.
+
+Aslında, şimdi 10 yıl önce, 2012 senesindeki useR konfersansindaki keynotelardan birinde R Markdown'in reproducible authoring için "yeni" bir araç olarak sunuldugunu dun gibi hatirliyorum. 
+Ve o konusmada, slide 3te falan, direk bilgisayarimi cikarip R Markdown'u denemeye basladigimi da hatirliyorum.
+Bu yüzden, bazılarınız beni dinlemek yerine şu anda Quarto'yla oynamaya basladiysa, başarılı bir konusma oldugunu dusunecegim!
+:::
+
+##  {#link-to-slides .center data-menu-title="Link to slides" background-image="images/horst_quarto_penguins_thankyou.png" aria-label="Şafakta bir buzdağının üzerinde duran iki penguen, kollarını birbirlerinin omuzlarına dolamış arkadan bakıldığında. Bir Quarto logosu ayı ufka yakın."}
+
+[[mine.quarto.pub/merhaba-quarto](https://mine.quarto.pub/merhaba-quarto)]{.custom-url-top-dark}
+
+::: notes
+Ama umarım tek kulakla dinlemeye devam eder ve Allison Horst'un güzel resimlerini enjoy edersiniz.
+
+Eger sadece oturup dinlemek isterseniz konusmayi, bu linke gidebilirsiniz.
+
+Ve sonra arkaniza yaslanip kollarinizi baglayabilirsiniz -- ben slaydlari sizin icin  ilerleteceğim.
+:::
+
+## R Markdown ekosistemi
+
+![](images/1-share/rmd_ecosystem.png){fig-align="center" fig-alt="R Markdown ekosisteminden çeşitli paketler için onaltılık logolar."}
+
+::: notes
+Quarto R Markdown ekosistemini birlestirir demistik. 
+Ne demektir bu?
+
+Yıllar boyunca sevdiğiniz ve güvendiğiniz R Markdown ekosistemindeki tüm paketleri düşünün.
+Her paket farklı bir ihtiyaca hitap eder ve farklı bir çıktı sunar: örneğin, web siteleri ve bloglar oluşturmak için blogdown veya distill, kitap yazmak için bookdown, journal makaleleri yazmak için rticles vb. kullanabilirsiniz.
+:::
+
+## Quarto: Yeni nesil R Markdown {transition="zoom"}
+
+![](images/horst_quarto_ball_straight.png){fig-align="center" width="50%" fig-alt="Quarto logosu."}
+
+::: notes
+Quarto, bu paketlerdeki işlevselliği 10 senedir R Markdown ekosistemini develop ve maintain etmenin verdigi bilgilerle birleştirir.
+
+Tahmin edersiniz ki boyle bir birleştirme çabası, kullanıcı deneyimindeki işlevsellik boşluklarını ve verimsizlikleri de ortaya cikarmak icin harika bir firsattir -- Quarto'nun developmenti bundan da cok yararlanmistir.
+:::
+
+## Quarto highlights
+
+::: columns
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+::: bulletbox
+::: {.fragment .fade-in-then-semi-out}
+![](images/horst_quarto_ball-1_4.png){width="50px" fig-alt="Quarto logosunun bir çeyreği."} Her feature tutarlı bir şekilde farkli formatlarda ayni şekilde çalışır: tabsetler, syntax highlighting, code folding, vb.
+
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+::: bulletbox
+::: {.fragment .fade-in-then-semi-out}
+![](images/horst_quarto_ball-2_4.png){width="50px" fig-alt="Two quadrants of the Quarto logo."} Erişilebilirlik için daha iyi desteğin yanı sıra daha erişilebilir defaultlar.
+
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+:::
+
+::: columns
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+::: bulletbox
+::: {.fragment .fade-in-then-semi-out}
+![](images/horst_quarto_ball-3_4.png){width="50px" fig-alt="Three quadrants of the Quarto logo."} Özellikle de yeni öğrenenler için yararlı olan ama herkesin hayatını kolaylaştıran YAML tamamlama, bilgilendirici ve okunabilir sözdizimi hataları, vb.
+
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+::: bulletbox
+::: {.fragment .fade-in-then-semi-out}
+![](images/horst_quarto_ball-4_4.png){width="50px" fig-alt="Four quadrants of the Quarto logo."} Hem knitr hem de jupyter kullanabilen çalıştırılabilir kod bloklari aracılığıyla R'ın yanısıra Python, Julia, Observable ve daha birçok dilde kod için destek.
+
+:::
+:::
+:::
+
+::: {.column width="5%"}
+:::
+:::
+
+::: notes
+Bu iyileştirmelerin bazı önemli noktaları şunları içerir:
+
+--\> 1
+
+--\> 2
+
+--\> 3
+
+--\> ve belki de en onemli olarak, 4
+
+\[pause\] Şimdiye kadar çoğunuzun Quarto ile oynamaya başladığını veya benim bir demo yapmamı beklediğini dusunuyorum, degil mi?
+Öyleyse, hadi Quarto'ya yakindan bir bakalim!
+:::
+
+##  {#demo-share .centered data-menu-title="Demo: Paylaş" background-color="#FFFFFF"}
+
+```{=html}
+<script src="https://fast.wistia.com/embed/medias/a1rq6hfnoe.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:57.08% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_a1rq6hfnoe videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/a1rq6hfnoe/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+```
+::: notes
+-   Open hello.Rmd with source editor -\> knit
+-   Change to visual editor -\> knit
+-   Close file -\> change file type to .qmd -\> open + render
+-   Change `output: html_document` to `format: html` -\> render
+-   Click on Render on save
+-   Change to `format: pdf` -\> render -\> then change back
+-   Add chunk option `echo: false` to the first chunk
+-   Add `execute` \> `echo: false` to the yaml
+-   Add alt text to figure in second code chunk -\> save to render
+-   Change to `format: revealjs` -\> save to render
+-   Add H2 to break slides
+-   Change to `format: html`
+-   Add `index.qmd` with File \> New Quarto Document
+-   Add `_quarto.yml` for website
+-   Relaunch project
+-   Show new Build tab
+-   Render site, show `_site` folder
+-   Add freeze to \_quarto.yml
+-   From terminal: `quarto publish`
+:::
+
+## Quarto CLI, işlemenin<br>her adımını yönetir {.takeaway .center}
+
+::: {.fragment .fade-up}
+![](images/horst_qmd_render_schema.png){fig-alt="Quarto belgelerinin .qmd'den knitr veya jupyter'a, düz metin işaretlemesine dönüştürülmesini ve ardından pandoc tarafından html, PDF veya Word belgesi dahil olmak üzere herhangi bir sayıda çıktı türüne dönüştürülmesini temsil eden bir şematik" fig-align="center"}
+:::
+
+::: notes
+Artık hepiniz Quarto'yu iş başında görme şansınız olduğuna göre, "R Markdown ve Quarto nasıl farklı?" diye merak ediyor olabilirsiniz.
+
+Temel fark, R Markdown ile R paketi rmarkdown'ın, kod parçalarını değerlendirmek için knitr kullanarak kaynak Rmd dosyasından çıktıya gitmenin ağır işini yapmasıdır.
+
+--\> Öte yandan Quarto ile, Quarto komut satırı arabirimi veya Quarto CLI, çalıştırılabilir kod parçalarının knitr veya jupyter ile işlenmesi ve ardından elde edilen işaretleme dosyasının istenen çıktıya dönüştürülmesinin orkestrasyonunu yapar.
+
+Bu teknik olarak etkileyici olsa da, dürüst olacağım, ilk etapta Quarto'ya olan ilgimi tam olarak ateşleyen şey bu değildi.
+:::
+
+## Quarto formatlar arasında gidip gelmeyi kolaylaştırır {.takeaway .center}
+
+::: columns
+::: {.column width="33%"}
+::: fragment
+Document
+
+::: {.code-file .sourceCode .cell-code}
+{{< fa file >}} lesson-1.qmd
+:::
+
+``` yaml
+title: "Lesson 1"
+format: html
+```
+:::
+:::
+
+::: {.column width="33%"}
+::: fragment
+Presentation
+
+::: {.code-file .sourceCode .cell-code}
+{{< fa file >}} lesson-1.qmd
+:::
+
+``` yaml
+title: "Lesson 1"
+format: revealjs
+```
+:::
+:::
+
+::: {.column width="33%"}
+::: fragment
+Website
+
+::: {.code-file .sourceCode .cell-code}
+{{< fa file >}} _quarto.yml
+:::
+
+``` yaml
+project:
+  type: website
+
+website: 
+  navbar: 
+    left:
+      - lesson-1.qmd
+```
+:::
+:::
+:::
+
+::: notes
+Asil ilgimi çeken şey, Quarto ile çıktı formatları arasında geçiş yapmanın ne kadar kolay olduğuydu.
+
+Bir eğitimci olarak, malzemelerimi oluşturmak için kullandığım araçlarla ilgili iki şey benim için çok önemli: tekrarlanabilirlik ve belgelerden slaytlara, web sitelerinden kitaplara gibi çıktı biçimleri arasında geçiş kolaylığı.
+
+Quarto'yu hemen hemen her şey için kullandığım geçen yıl boyunca, sonunda bir çıktı türünden diğerine geçmeme izin veren aracı bulduğumu hissettim. .
+Örneğin, burada ürettiğim yaygın şeyler
+
+--\> belge biçiminde bir ders <br> --\> sunum biçiminde aynı içerik <br> --\> bir web sitesindeki bir sayfada aynı içerik,
+
+ve bu biçimler arasında geçiş yapmak için gereken tek şeyin yaml'deki birkaç satır olduğunu görebilirsiniz.
+Belgemin içerik kısmında hiçbir şey yok.
+Kaldırılacak slayt araları yok, değiştirilecek alıntı stili yok, yeniden seviyelendirilecek başlıklar yok.
+Bu geçiş kolaylığı, zamanımı içeriğe odaklamak için zaman kazandırdı ve millet, rüya bu!
+:::
+
+## Quarto açık paylaşımı kolaylaştırır {.takeaway .center}
+
+<br>
+
+::: {.fragment .fade-up .midi}
+Yaptığınız şeyleri web'de paylaşmayı<br>kolaylaştıran araçlar inanılmaz derecede faydalıdır
+:::
+
+<br>
+
+::: {.fragment .fade-up .midi}
+Bilginin açık paylaşımını kolaylaştırdığından,<br>
+yalnızca sizin için değil, herkes için yararlıdır
+:::
+
+::: notes
+Sonuç olarak, kolayca yeniden üretilebilir eserler yaratmak harikadır.
+
+Ancak paylaşım öyküsünün tamamlanması için, aracın aynı zamanda "quarto publish" kadar basit bir komut ile kolayca *paylaşımı* desteklemesi gerekir.
+
+--\> Yaptığınız şeyi web'de dünyayla paylaşmayı kolaylaştıran araçların inanılmaz derecede yararlı olduğunu düşünüyorum.
+
+--\> Ve öğrenme ve yeniden kullanım için bilginin açık paylaşımını kolaylaştırdığından, yalnızca yaratıcısı olan sizin için değil, dünya için de yararlıdır.
+
+\[Pause\]
+
+Şimdiye kadar sadece kendimden ve işimden bahsettim ama çoğunuz gibi ben de diğerlerinden kopuk bir siloda çalışmıyorum.
+
+**\[Mine continue on next slide\]**
+:::

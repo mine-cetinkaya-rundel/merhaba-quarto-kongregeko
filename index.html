@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.353">
+
+  <title>Merhaba Quarto</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #767676;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
+    div.sourceCode
+      { color: #545454; background-color: #fefefe; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #545454; } /* Normal */
+    code span.al { color: #7928a1; } /* Alert */
+    code span.an { color: #696969; } /* Annotation */
+    code span.at { color: #a55a00; } /* Attribute */
+    code span.bn { color: #7928a1; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #d91e18; } /* ControlFlow */
+    code span.ch { color: #008000; } /* Char */
+    code span.cn { color: #d91e18; } /* Constant */
+    code span.co { color: #696969; } /* Comment */
+    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
+    code span.do { color: #696969; font-style: italic; } /* Documentation */
+    code span.dt { color: #7928a1; } /* DataType */
+    code span.dv { color: #7928a1; } /* DecVal */
+    code span.er { color: #7928a1; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #a55a00; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #696969; } /* Information */
+    code span.kw { color: #d91e18; } /* Keyword */
+    code span.op { color: #00769e; } /* Operator */
+    code span.ot { color: #d91e18; } /* Other */
+    code span.pp { color: #7928a1; } /* Preprocessor */
+    code span.sc { color: #00769e; } /* SpecialChar */
+    code span.ss { color: #008000; } /* SpecialString */
+    code span.st { color: #008000; } /* String */
+    code span.va { color: #a55a00; } /* Variable */
+    code span.vs { color: #008000; } /* VerbatimString */
+    code span.wa { color: #696969; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="hello-quarto-title" class="slide level2" data-menu-title="Hello Quarto" data-background-image="images/horst_penguins_telescope.png" aria-label="One penguin standing on another penguin's shoulders in a snowscape, looking through a telescope at a Quarto logo moon in the night sky.">
+<h2></h2>
+<p><span class="custom-title">Merhaba Quarto</span></p>
+<p><span class="custom-subtitle">KongreGeko 2022</span></p>
+<p><span class="custom-author">mine çetinkaya-rundel</span></p>
+<p><span class="custom-url"><a href="https://mine.quarto.pub/merhaba-quarto">mine.quarto.pub/merhaba-quarto</a></span></p>
+<aside class="notes">
+<p>Beni davet ettiginiz icin çok teşekkür ederim. Oncelikle biraz kendimden bahsederek baslayayim. Ben Duke Universitesi’nde Istatistik bolumunde profesorum ve ayni zamanda Posit’de (ya da bir onceki ismiyle RStudio’da) Developer Educator olarak calisiyorum. Reproducibility ve reproducible computing ilgi, arastirma, ve egitim alanlarimdan biri ve son bir bucuk senedir Quarto’yu kullanıyorum, öğretiyorum ve developmentina katkıda bulunuyorum. Bugun sizlerleri Quarto ile tanistiracagim icin de cok mutlutum.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="merhaba-quarto" class="title-slide slide level1 title-top-light center" data-background-image="images/horst-quarto-meteor-transparent.png" aria-label="A meteor where the head of the meteor is the Quarto logo.">
+<h1>Merhaba, Quarto?</h1>
+<aside class="notes">
+<p>Quarto nedir? Bu konusma icin neden Quarto’dan bahsetmeyi sectim? R Markdown veya Jupyter Notebooklarla veya kullandiginiz workflowlarla nasıl bir ilişkisi var? Bu sorularin cevaplarini merak ediyor olabilirsiniz.</p>
+<p>–&gt; Hadi baslayalim o zaman.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="publishing-system-1" class="slide level2 centered" data-menu-title="Publishing system 1" data-background-color="#0F1620" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="margin-top: 100px; font-size: 3em; color: #75AADB;">
+<p>Quarto yeni, açık kaynaklı,<br> bilimsel ve teknik<br> bir yayın sistemidir.</p>
+</div>
+</section>
+<section id="publishing-system-2" class="slide level2 centered" data-menu-title="Publishing system 2" data-background-color="#0F1620" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="margin-top: 50px; font-size: 2em; color: #75AADB">
+<p>Quarto yeni, açık kaynaklı,<br> bilimsel ve teknik<br> bir yayın sistemidir.</p>
+</div>
+<div class="midi">
+<p>Amaç, <strong>yaratma ve birlikte çalışma sürecini</strong><br> önemli ölçüde daha iyi hale getirmektir.</p>
+</div>
+<div class="fragment fade-up">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/horst_quarto_schematic.png" alt="Quarto'nun çoklu dil girdisini (ör. Python, R, Observable, Julia) ve çok formatlı çıktıyı (ör. PDF, html, Word belgeleri ve daha fazlası) temsil eden bir şematik." width="1100"></p>
+</figure>
+</div>
+</div>
+<aside class="notes">
+<p>Amaç, yaratma ve birlikte çalışma sürecini önemli ölçüde daha iyi hale getirmektir.</p>
+<p>–&gt; Quarto’nin onemli bir ozelligi bircok bilgisayar dilini process edebilmesi ve bircok formatta output yaratabilmesidir.</p>
+<p>Oncelikle “bircok bilgisayar dilini process edebilmek”le ne demek istedigimi kisaca bir aciklayayim. Sonra da daha kapsamli olarak Quarto’nun neden bu is icin tercih edilmesi gereken bir tool oldugundan bahsedelim.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bilimsel-makale-yazımı-iş-akışı" class="slide level2">
+<h2>Bilimsel makale yazımı iş akışı</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Geleneksel:</strong> <img data-src="images/traditional.png"></p>
+</div><div class="column fragment" style="width:50%;">
+<p><strong>Tekrarlanabilir:</strong> <img data-src="images/reproducible.png"></p>
+</div>
+</div>
+<aside class="notes">
+<p>Bilimsel makale ya da herhangi bir data analizi iceren bir yazi yazarken geleneksel workflowda data analizini bir software’le, yazimi da baska bir softwarele yapariz. Mesela analizi R veya Stata ile yapip, sonra sonuclari ya da grafikleri kopyalayip Word, Google Doc gibi bir dokumana yapistiririz. Bu programlarin kullanimi genelde kolaydir, fakat bu sekilde develop edilen bir manuscripti reproduce ya da update etmek hic kolay degildir. Mesela analiz ettiginiz datada bir degisiklik olursa, makaleyi update etmek icin tekrardan butun outputlari ve grafikleri copy/paste etmenir gerekir. Bu da hem hata yapmanin cok kolay oldugu bir processdir, hem de, acikcasi, cok sikici bir is olabilir.</p>
+<p>Bunun yerine tekrarlanabilir, yani reproducible, bir workflowda analiz ve yazi yazma islemleri ayni softwarele yapilir. Computational document dedigimiz bir dokuman icine hem duzyazi hem de code chunklari koyabiliriz.</p>
+<p>Quarto bu islemi kolaylastiran bir sistemdir.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="unifies-extends-1" class="slide level2 centered" data-menu-title="Unifies and extends 1" data-background-color="#0F1620" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="margin-top: 150px; font-size: 3em; color: #75AADB;">
+<p>Quarto,<br>R Markdown ekosistemini<br><strong>birleştirir</strong> ve <strong>genişletir</strong></p>
+</div>
+<aside class="notes">
+<p>Eger R kullaniyorsaniz, bu bahsettigim sistem R Markdown’u hatirlatiyor olabilir.</p>
+<p>Haklisiniz da boyle dusunmekte.</p>
+<p>Quarto R Markdown ekosistemini birlestirir ve genisletir.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="unifies-extends-2" class="slide level2 centered" data-menu-title="Unifies and extends 2" data-background-color="#0F1620" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="margin-top: 100px; font-size: 2.2em; color: #75AADB">
+<p>Quarto,<br>R Markdown ekosistemini<br><strong>birleştirir</strong> ve <strong>genişletir</strong></p>
+</div>
+<p><br></p>
+<div class="large">
+<p>R Markdown severler için <strong>birleştirir</strong></p>
+</div>
+<p><br></p>
+<div class="fragment fade-up large" data-fragment-index="2">
+<p>R Markdown bilmeyenler icin <strong>genişletir</strong></p>
+</div>
+<aside class="notes">
+<p>R Markdown severler için birleştirir. Bu da demek ki farkli farkli R paketlerini ogrenmek ve kullanmakla ugrasmak yerine, tek bir Quarto sistemini kullanabilirsiniz.</p>
+<p>Ve R ve R Markdown bilmeyenler icin diger dillerde ayni workflowu kullanabilmeye olanak vererek genişletir</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="outline-3" class="slide level2 centered" data-menu-title="Outline 3" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+
+<img data-src="images/outline-3.png" alt="Dört çeyreğin tümü şu şekilde etiketlenmiş Quarto logosu: Share, Collaborate, Teach, and Reimagine." class="r-stretch"><aside class="notes">
+<p>Quarto’yu dört perdede tanıtacağım - Paylaş, İşbirliği Yap, Öğret ve Yeniden Hayal Et. Her birinin bir hikayesi ve bir demosu var. Öyleyse başlayalım.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="share" class="title-slide slide level1 title-middle-dark center" data-background-image="images/horst_quarto_penguins_share.png" aria-label="Karlı bir manzarada birlikte selfie çeken iki mutlu penguen.">
+<h1>Share</h1>
+<aside class="notes">
+<p>Share, yani paylasim, ile baslayalim.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="share-intro" class="slide level2 center" data-menu-title="Share Intro">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><img data-src="images/1-share/mine-venn.svg" alt="Eğitim, araştırma ve geliştirme olmak üzere üç daireli bir Venn diyagramı. Kavşakta şefkat kelimesiyle mavi bir kalp var."></p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="images/horst_penguins_nametag_mine.png" alt="Ad etiketi yazan penguen: &quot;Mine&quot;"></p>
+</div>
+</div>
+<aside class="notes">
+<p>Ben eğitim, araştırma ve geliştirmenin kesiştiği noktada çalışıyorum.</p>
+<p>Eğitimci kelimesi size 7/24 öğrencilerin önünde ders verdigimi düşündürebilir, ama gerçekte, zamanımın çoğunu bilgisayarımın başında yazarak ve insanlarla çeşitli şekillerde paylaşmak için materyaller oluşturarak geçiriyorum. Yarattığım her ne ise, hepsini açık bir şekilde - yani ücretsiz kullanıma, yeniden kullanıma ve uyarlamaya izin veren açık bir lisansla - paylaşıyorum. Çoğu zaman daha geniş erişim için “önce web”i düşünürüm, ancak yine de geleneksel dergi yayıncılığının ve akademinin sınırları içinde yaşıyorum, bu da düzenli olarak çalışmamın PDF sürümlerini oluşturmam gerektiği anlamına geliyor.</p>
+<p>Bu nedenle, hem kod hem de metin içeren tek bir kaynaktan birden çok türde çıktıya izin veren bir yazim sistemi, bana zaman kazandirmasinin otesinde, temel bir gerek haline gelmistir artik benim icin. Ve son on yılda benim için bu araç R Markdown oldu.</p>
+<p>Aslında, şimdi 10 yıl önce, 2012 senesindeki useR konfersansindaki keynotelardan birinde R Markdown’in reproducible authoring için “yeni” bir araç olarak sunuldugunu dun gibi hatirliyorum. Ve o konusmada, slide 3te falan, direk bilgisayarimi cikarip R Markdown’u denemeye basladigimi da hatirliyorum. Bu yüzden, bazılarınız beni dinlemek yerine şu anda Quarto’yla oynamaya basladiysa, başarılı bir konusma oldugunu dusunecegim!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="link-to-slides" class="slide level2 center" data-menu-title="Link to slides" data-background-image="images/horst_quarto_penguins_thankyou.png" aria-label="Şafakta bir buzdağının üzerinde duran iki penguen, kollarını birbirlerinin omuzlarına dolamış arkadan bakıldığında. Bir Quarto logosu ayı ufka yakın.">
+<h2></h2>
+<p><span class="custom-url-top-dark"><a href="https://mine.quarto.pub/merhaba-quarto">mine.quarto.pub/merhaba-quarto</a></span></p>
+<aside class="notes">
+<p>Ama umarım tek kulakla dinlemeye devam eder ve Allison Horst’un güzel resimlerini enjoy edersiniz.</p>
+<p>Eger sadece oturup dinlemek isterseniz konusmayi, bu linke gidebilirsiniz.</p>
+<p>Ve sonra arkaniza yaslanip kollarinizi baglayabilirsiniz – ben slaydlari sizin icin ilerleteceğim.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="r-markdown-ekosistemi" class="slide level2">
+<h2>R Markdown ekosistemi</h2>
+
+<img data-src="images/1-share/rmd_ecosystem.png" alt="R Markdown ekosisteminden çeşitli paketler için onaltılık logolar." class="r-stretch quarto-figure-center"><aside class="notes">
+<p>Quarto R Markdown ekosistemini birlestirir demistik. Ne demektir bu?</p>
+<p>Yıllar boyunca sevdiğiniz ve güvendiğiniz R Markdown ekosistemindeki tüm paketleri düşünün. Her paket farklı bir ihtiyaca hitap eder ve farklı bir çıktı sunar: örneğin, web siteleri ve bloglar oluşturmak için blogdown veya distill, kitap yazmak için bookdown, journal makaleleri yazmak için rticles vb. kullanabilirsiniz.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-yeni-nesil-r-markdown" class="slide level2" data-transition="zoom">
+<h2>Quarto: Yeni nesil R Markdown</h2>
+
+<img data-src="images/horst_quarto_ball_straight.png" style="width:50.0%" alt="Quarto logosu." class="r-stretch quarto-figure-center"><aside class="notes">
+<p>Quarto, bu paketlerdeki işlevselliği 10 senedir R Markdown ekosistemini develop ve maintain etmenin verdigi bilgilerle birleştirir.</p>
+<p>Tahmin edersiniz ki boyle bir birleştirme çabası, kullanıcı deneyimindeki işlevsellik boşluklarını ve verimsizlikleri de ortaya cikarmak icin harika bir firsattir – Quarto’nun developmenti bundan da cok yararlanmistir.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-highlights" class="slide level2">
+<h2>Quarto highlights</h2>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<div class="bulletbox">
+<div class="fragment fade-in-then-semi-out">
+<p><img data-src="images/horst_quarto_ball-1_4.png" alt="Quarto logosunun bir çeyreği." width="50"> Her feature tutarlı bir şekilde farkli formatlarda ayni şekilde çalışır: tabsetler, syntax highlighting, code folding, vb.</p>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<div class="bulletbox">
+<div class="fragment fade-in-then-semi-out">
+<p><img data-src="images/horst_quarto_ball-2_4.png" alt="Two quadrants of the Quarto logo." width="50"> Erişilebilirlik için daha iyi desteğin yanı sıra daha erişilebilir defaultlar.</p>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<div class="bulletbox">
+<div class="fragment fade-in-then-semi-out">
+<p><img data-src="images/horst_quarto_ball-3_4.png" alt="Three quadrants of the Quarto logo." width="50"> Özellikle de yeni öğrenenler için yararlı olan ama herkesin hayatını kolaylaştıran YAML tamamlama, bilgilendirici ve okunabilir sözdizimi hataları, vb.</p>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<div class="bulletbox">
+<div class="fragment fade-in-then-semi-out">
+<p><img data-src="images/horst_quarto_ball-4_4.png" alt="Four quadrants of the Quarto logo." width="50"> Hem knitr hem de jupyter kullanabilen çalıştırılabilir kod bloklari aracılığıyla R’ın yanısıra Python, Julia, Observable ve daha birçok dilde kod için destek.</p>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div>
+</div>
+<aside class="notes">
+<p>Bu iyileştirmelerin bazı önemli noktaları şunları içerir:</p>
+<p>–&gt; 1</p>
+<p>–&gt; 2</p>
+<p>–&gt; 3</p>
+<p>–&gt; ve belki de en onemli olarak, 4</p>
+<p>[pause] Şimdiye kadar çoğunuzun Quarto ile oynamaya başladığını veya benim bir demo yapmamı beklediğini dusunuyorum, degil mi? Öyleyse, hadi Quarto’ya yakindan bir bakalim!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="demo-share" class="slide level2 centered" data-menu-title="Demo: Paylaş" data-background-color="#FFFFFF">
+<h2></h2>
+<script src="https://fast.wistia.com/embed/medias/a1rq6hfnoe.jsonp" async=""></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script><div class="wistia_responsive_padding" style="padding:57.08% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_a1rq6hfnoe videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/a1rq6hfnoe/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;"></div></div></div></div>
+<aside class="notes">
+<ul>
+<li>Open hello.Rmd with source editor -&gt; knit</li>
+<li>Change to visual editor -&gt; knit</li>
+<li>Close file -&gt; change file type to .qmd -&gt; open + render</li>
+<li>Change <code>output: html_document</code> to <code>format: html</code> -&gt; render</li>
+<li>Click on Render on save</li>
+<li>Change to <code>format: pdf</code> -&gt; render -&gt; then change back</li>
+<li>Add chunk option <code>echo: false</code> to the first chunk</li>
+<li>Add <code>execute</code> &gt; <code>echo: false</code> to the yaml</li>
+<li>Add alt text to figure in second code chunk -&gt; save to render</li>
+<li>Change to <code>format: revealjs</code> -&gt; save to render</li>
+<li>Add H2 to break slides</li>
+<li>Change to <code>format: html</code></li>
+<li>Add <code>index.qmd</code> with File &gt; New Quarto Document</li>
+<li>Add <code>_quarto.yml</code> for website</li>
+<li>Relaunch project</li>
+<li>Show new Build tab</li>
+<li>Render site, show <code>_site</code> folder</li>
+<li>Add freeze to _quarto.yml</li>
+<li>From terminal: <code>quarto publish</code></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-cli-işlemenin-her-adımını-yönetir" class="slide level2 takeaway center">
+<h2>Quarto CLI, işlemenin<br>her adımını yönetir</h2>
+<div class="fragment fade-up">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/horst_qmd_render_schema.png" alt="Quarto belgelerinin .qmd'den knitr veya jupyter'a, düz metin işaretlemesine dönüştürülmesini ve ardından pandoc tarafından html, PDF veya Word belgesi dahil olmak üzere herhangi bir sayıda çıktı türüne dönüştürülmesini temsil eden bir şematik"></p>
+</figure>
+</div>
+</div>
+<aside class="notes">
+<p>Artık hepiniz Quarto’yu iş başında görme şansınız olduğuna göre, “R Markdown ve Quarto nasıl farklı?” diye merak ediyor olabilirsiniz.</p>
+<p>Temel fark, R Markdown ile R paketi rmarkdown’ın, kod parçalarını değerlendirmek için knitr kullanarak kaynak Rmd dosyasından çıktıya gitmenin ağır işini yapmasıdır.</p>
+<p>–&gt; Öte yandan Quarto ile, Quarto komut satırı arabirimi veya Quarto CLI, çalıştırılabilir kod parçalarının knitr veya jupyter ile işlenmesi ve ardından elde edilen işaretleme dosyasının istenen çıktıya dönüştürülmesinin orkestrasyonunu yapar.</p>
+<p>Bu teknik olarak etkileyici olsa da, dürüst olacağım, ilk etapta Quarto’ya olan ilgimi tam olarak ateşleyen şey bu değildi.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-formatlar-arasında-gidip-gelmeyi-kolaylaştırır" class="slide level2 takeaway center">
+<h2>Quarto formatlar arasında gidip gelmeyi kolaylaştırır</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="fragment">
+<p>Document</p>
+<div class="code-file sourceCode cell-code">
+<p><i class="fa-solid fa-file"></i> lesson-1.qmd</p>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Lesson 1"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="fragment">
+<p>Presentation</p>
+<div class="code-file sourceCode cell-code">
+<p><i class="fa-solid fa-file"></i> lesson-1.qmd</p>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Lesson 1"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> revealjs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="fragment">
+<p>Website</p>
+<div class="code-file sourceCode cell-code">
+<p><i class="fa-solid fa-file"></i> _quarto.yml</p>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> lesson-1.qmd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Asil ilgimi çeken şey, Quarto ile çıktı formatları arasında geçiş yapmanın ne kadar kolay olduğuydu.</p>
+<p>Bir eğitimci olarak, malzemelerimi oluşturmak için kullandığım araçlarla ilgili iki şey benim için çok önemli: tekrarlanabilirlik ve belgelerden slaytlara, web sitelerinden kitaplara gibi çıktı biçimleri arasında geçiş kolaylığı.</p>
+<p>Quarto’yu hemen hemen her şey için kullandığım geçen yıl boyunca, sonunda bir çıktı türünden diğerine geçmeme izin veren aracı bulduğumu hissettim. . Örneğin, burada ürettiğim yaygın şeyler</p>
+<p>–&gt; belge biçiminde bir ders <br> –&gt; sunum biçiminde aynı içerik <br> –&gt; bir web sitesindeki bir sayfada aynı içerik,</p>
+<p>ve bu biçimler arasında geçiş yapmak için gereken tek şeyin yaml’deki birkaç satır olduğunu görebilirsiniz. Belgemin içerik kısmında hiçbir şey yok. Kaldırılacak slayt araları yok, değiştirilecek alıntı stili yok, yeniden seviyelendirilecek başlıklar yok. Bu geçiş kolaylığı, zamanımı içeriğe odaklamak için zaman kazandırdı ve millet, rüya bu!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-açık-paylaşımı-kolaylaştırır" class="slide level2 takeaway center">
+<h2>Quarto açık paylaşımı kolaylaştırır</h2>
+<p><br></p>
+<div class="fragment fade-up midi">
+<p>Yaptığınız şeyleri web’de paylaşmayı<br>kolaylaştıran araçlar inanılmaz derecede faydalıdır</p>
+</div>
+<p><br></p>
+<div class="fragment fade-up midi">
+<p>Bilginin açık paylaşımını kolaylaştırdığından,<br> yalnızca sizin için değil, herkes için yararlıdır</p>
+</div>
+<aside class="notes">
+<p>Sonuç olarak, kolayca yeniden üretilebilir eserler yaratmak harikadır.</p>
+<p>Ancak paylaşım öyküsünün tamamlanması için, aracın aynı zamanda “quarto publish” kadar basit bir komut ile kolayca <em>paylaşımı</em> desteklemesi gerekir.</p>
+<p>–&gt; Yaptığınız şeyi web’de dünyayla paylaşmayı kolaylaştıran araçların inanılmaz derecede yararlı olduğunu düşünüyorum.</p>
+<p>–&gt; Ve öğrenme ve yeniden kullanım için bilginin açık paylaşımını kolaylaştırdığından, yalnızca yaratıcısı olan sizin için değil, dünya için de yararlıdır.</p>
+<p>[Pause]</p>
+<p>Şimdiye kadar sadece kendimden ve işimden bahsettim ama çoğunuz gibi ben de diğerlerinden kopuk bir siloda çalışmıyorum.</p>
+<p><strong>[Mine continue on next slide]</strong></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="collaborate" class="title-slide slide level1 title-top-ice center" data-background-image="images/horst_penguins_telescope.png" aria-label="Bir kar manzarasında başka bir penguenin omuzlarında duran bir penguen, gece gökyüzünde bir Quarto logo ayına teleskopla bakıyor.">
+<h1>Collaborate</h1>
+<aside class="notes">
+<p>Benim projelerim ve eminim çoğunuzun da projeleri ortak çalışmaya dayalıdır.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="many-use-python" class="slide level2 center centered" data-menu-title="Many use Python" data-background-color="#0F1620">
+<h2></h2>
+<p><span class="larger">Birçok bilim insanı <br> Python kullanıyor<br> 😬</span></p>
+<aside class="notes">
+<p>Birçok bilim insanı python ve jupyter defterleri kullanır. Bu nedenle, işbirlikleriniz diller arasında gezinmeyi içerebilir, ancak muhtemelen Python’u yalnızca bir işbirliği için sıfırdan öğrenmek istemiyorsunuz. Ek olarak, bir R Markdown kullanıcısıysanız, çalışmanızı R Markdown’da tutmak için zaten retiküle aracılığıyla Python kodunu çalıştırıyor olabilirsiniz veya diller arası işbirliklerinizde R Markdown yazma deneyiminden vazgeçmeniz gerektiğini hissediyor olabilirsiniz. Jupyter not defterleri, yeniden üretilebilir yazma için bariz bir yer ve Python kullanıcılarının kendilerini özellikle evlerinde hissettikleri bir yer. Ve bir bilgi işlem ortamında kendinizi “evinizde” hissettiğinizde, yalnızca işbirliği amacıyla nadiren oradan ayrılmak istersiniz ve bunun yerine, yalnızca ortak çalışanınızla birlikte onlarınkini bırakıp sizinkine gelirsiniz.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-biden-fazla-kodlama-dilini-bir-araya-getiren-projelere-olanak-tanır" class="slide level2 takeaway center" data-highlight-style="github">
+<h2>Quarto biden fazla kodlama dilini bir araya getiren<br>projelere olanak tanır</h2>
+<p><br>
+</p>
+<div class="code-file sourceCode cell-code">
+<p><i class="fa-solid fa-file"></i> _quarto.yml</p>
+</div>
+<div class="sourceCode" id="cb4" data-code-line-numbers="2,4,8,11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> in-development/index.qmd</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="at">      </span><span class="kw">-</span><span class="at"> in-development/earthdata-access-demo.ipynb</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="at">      </span><span class="kw">-</span><span class="at"> in-development/nsidc/icesat2-cmr-onprem-vs-cloud.ipynb</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="at">      </span><span class="kw">-</span><span class="at"> in-development/lpdaac/lpdaac_ecostress_lste_kerchunk.ipynb</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="at">      </span><span class="kw">-</span><span class="at"> in-development/matlab-aws.qmd</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="at">      </span><span class="kw">-</span><span class="at"> in-development/earthdata-python-r-handoff.rmd  </span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> contributing/onboarding.qmd</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="at">      </span><span class="kw">-</span><span class="at"> contributing/quarto-website-tutorial.md</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<p>Quarto, kodlama dilleri arasında işbirliğine olanak tanır. Bu, farklı dosya türlerini bir araya getiren bir YAML’in basitleştirilmiş bir görünümüdür. Gordugunuz gibi coğunlukla ipynbs Jupyter notebooklari var ama qmd, rmd, ve md dosyalari da var.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-mevcut-idelerinizden-katkıda-bulunmayı-sağlar" class="slide level2 takeaway center">
+<h2>Quarto mevcut IDElerinizden<br>katkıda bulunmayı sağlar</h2>
+<div class="centered">
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="borderbox">
+<p><img data-src="images/2-collaborate/tools-rstudio-ide.png" style="width:80.0%" alt="RStudio IDE'nin ekran görüntüsü"></p>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="borderbox">
+<p><img data-src="images/2-collaborate/tools-jupyterhub.png" style="width:80.0%" alt="Jupyter Lab ekran görüntüsü"></p>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="borderbox">
+<p><img data-src="images/2-collaborate/tools-github-ide.png" style="width:80.0%" alt="GitHub IDE ekran görüntüsü"></p>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="borderbox">
+<p><img data-src="images/2-collaborate/tools-vscode-ide.png" style="width:80.0%" alt="VS Code IDE ekran görüntüsü"></p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Quarto ile, RStudio IDE, JupyterLab, VS Code veya doğrudan GitHub’da belge düzenleme gibi, zaten rahat olduğunuz herhangi bir araçtan katkıda bulunabilirsiniz.</p>
+<p>Bu çok önemli çünkü bilim yapmak zaten zorlayıcı ve insanların çalışmaya katılabilmeleri için yazılım araçlarını değiştirmelerine de ihtiyacımız yok.</p>
+<p>Simdi de Jupyter ve Quarto nasil beraber Size kulliliyor bir ona bakalim.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="demo-collaborate" class="slide level2 center" data-menu-title="Demo: Collaborate" data-background-color="#FFFFFF">
+<h2></h2>
+<script src="https://fast.wistia.com/embed/medias/dfyjy1v1aw.jsonp" async=""></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_dfyjy1v1aw videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/dfyjy1v1aw/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;"></div></div></div></div>
+<aside class="notes">
+<ul>
+<li>Orient to JupyterLab. This is a JupyterHub managed by our collaborators at 2i2c</li>
+<li>Open Mine’s example site, quarto preview</li>
+<li>add .ipynb</li>
+<li>Add <code>.ipynb</code> to <code>_quarto.yml</code></li>
+<li>View website - new page is added to website</li>
+<li>Add fig captions</li>
+<li>margin plots: a style preferred by many now in jupyter notebook</li>
+</ul>
+<p>Çoklu dil desteğinin öğretim için de bircok etkileri vardır. O yüzden şimdi biraz da öğretimden bahsedelim.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="teach" class="title-slide slide level1 title-middle-ice center" data-background-image="images/horst_quarto_penguins_teach.png" aria-label="Buzdan yapılmış bir odada pencereden dışarı bakan iki penguen. Penguenlerden biri işaretçi olarak bir buz saçağı tutuyor ve gökyüzündeki Quarto logosuna sahip ayı işaret ederken, diğer penguen bakıyor.">
+<h1>Teach</h1>
+<aside class="notes">
+<p>Son on yılda, R Markdown’a öğretmeyi çok sevdim. Öğrencilerin Örgü düğmesine bastıklarında, kodlarının ve metinlerinin bir araya geldiğini gördüklerinde inanılmaz bir şey oluyor – bu ilk kez sınıfta sık sık bir “vay canına, bu harika” sesini duyabilirsiniz. Ayrıca bunun, giriş kursunun ilk gününde kolayca öğrenebilecekleri bir araç olması ve istatistiksel ve hesaplamalı uzmanlıkları arttıkça onlarla birlikte gelişmesi de hoşuma gitti. Bununla birlikte, öğrencilerin bu alanlardaki uzmanlıkları arttıkça, hesaplama daha yoğun kaynak gerektirir (ve hatta bazen birden fazla dili içerir) ve ihtiyaçlarını desteklemek için belirli günlük stillerinde PDF’ler veya birden çok bölümden oluşan bir tez gibi farklı çıktı biçimlerine ihtiyaç duyarlar. . Quarto ile öğretimde hoş bir sürpriz, tek, basit belgeden çok belgeli projelere bu geçişi yapmak için öğrenme eğrisinin ne kadar daha az dik olduğu olmuştur. Size tez öğrencilerimden birinin hikayesini anlatmak isterim</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="holland-stam-thesis-1" class="slide level2 center" data-menu-title="Quantifying Art Historical Narratives 1" data-background-color="#0F1620">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div style="text-align: right; padding-right:1em;">
+<div style="font-size: 1.5em;">
+<p><strong>Quantifying</strong><br>Art Historical<br>Narratives</p>
+</div>
+<p><br></p>
+<div class="midi" style="font-size: 1.5em; color: #75AADB;">
+<p>Holland Stam</p>
+</div>
+<p>Art History +<br> Visual and Media Studies</p>
+<p>Class of 2022</p>
+<p>Duke University</p>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/3-teach/holland-stam.png" alt="Broadhead Center'da bir masada çalışan ve bir girişi cetvelle ölçen Holland." width="600"></p>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Geçen bahar doneminde, Holland Stam adında oldukça qualitative bir araştırma projesi üzerinde çalışan bir sanat tarihi öğrencim vardı. Tezinde, temel sanat tarihi kitaplarında farklı cinsiyet ve etnik gruplardan sanatçıların temsili ve bu temsilin baskılar yoluyla nasıl değiştiği araştırıldı. Daha önce bir sanat tarihi dersi aldıysanız, onlara aşina olabilirsiniz: Garner’ın Çağlar Boyunca Sanatı ve Janson’ın Sanat Tarihi. Ders kitaplarının her birinin sayısız baskısından titizlikle veri topladı ve her bir sanat eserine ne kadar yer verildiğini sayfa sayfa ölçtü ve bunu sanatçılara ilişkin demografik bilgilerle birleştirdi. Regresyon kursumda Holland ile tanıştığımda, arka plan olarak R Markdown’u öğrendiği yalnızca bir sömestr veri bilimi vardı ve ardından sınıfımdaki kursun bir parçası olarak Quarto’yu kullanmaya başladı. Her iki sınıfta da hesaplamalı belgelerle ilgili deneyimi, ödev başına tek bir belgeyle, verileri analiz etmek için biraz kod yazmakla ve ardından bulguları yorumlamak için biraz metin yazmakla sınırlıydı. Bir anlamda tezi de tam olarak bunu gerektiriyordu ama elbette dahası da vardı. Birden çok bölüm, sanat tarihçilerinin kullandığı çok özel bir stilde milyonlarca alıntı, altyazılı şekiller ve tablolar ve her küçük düzenlemede tüm tez kodunu yeniden çalıştırmak zorunda kalmamak. Biraz Googling ve biraz da benim yardımımla, Quarto’da yazılmış tezinin bölümlerini bir yaml dosyasıyla nasıl bir araya getireceğini oldukça hızlı bir şekilde anladı ve voiola! Quarto’da yazılmış bir tezi vardı. Elbette, bu biraz deneme yanılma ve zaman zaman hayal kırıklığı gerektirdi, ancak rakamları oluştururken kodla altyazı yazabilmesi ve manuel metin stili olmadan alıntılar ekleyebilmesi onu sattı! Öğrencilerinizin onlara öğrettiklerinizi zorladıklarını ve onları problemlerini çözmek için kullandıklarını görmek her zaman çok iç açıcıdır, özellikle öğrettiğiniz yeni bir şeyde henüz aktif gelişim aşamasındayken bunun olması özellikle yüreklendiricidir. !</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="holland-stam-thesis-2" class="slide level2 center" data-menu-title="Quantifying Art Historical Narratives 2" data-background-color="#0F1620">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div style="text-align: right; padding-right:1em;">
+<div style="font-size: 1.5em;">
+<p><strong>Quantifying</strong><br>Art Historical<br>Narratives</p>
+</div>
+<p><br></p>
+<div class="midi" style="font-size: 1.5em; color: #75AADB;">
+<p>Holland Stam</p>
+</div>
+<p>Art History +<br> Visual and Media Studies</p>
+<p>Class of 2022</p>
+<p>Duke University</p>
+<p><em>with Sara Lemus</em> <img data-src="images/3-teach/arthistory.png" alt="arthistory paketi için hex logo." width="150"></p>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/3-teach/holland-stam.png" alt="Broadhead Center'da bir masada çalışan ve bir girişi cetvelle ölçen Holland." width="600"></p>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Ve bu arada, verilerle ilgileniyorsanız, Holland ve benim başka bir öğrencim, Sara Lemus, onu “sanat tarihi” olarak paketlediler. Sara, R ile çok daha fazla deneyime sahip bir istatistik uzmanı ve paket geliştirme hakkında bilgi edinmek için sürdürdüğüm bazı veri paketlerini güncellemek için benimle birlikte çalışıyordu. Laboratuar toplantılarımız sırasında Holland’ın teziyle ilgilendi ve yeni edindikleri beceriler ve coşkuyla ikisinin bir araya gelip verileri daha fazla araştırmacının kullanımına sunması, paketleyip CRAN’a alması gerektiği açıktı!</p>
+<p>Ama Quarto’ya dönersek… Hollanda’da olduğu gibi, Quarto da bir eğitmen olarak birçok sorunuma basit ama etkili çözümler sağladı. Size onlardan bahsetmek yerine, size göstereyim!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="demo-teach" class="slide level2 centered" data-menu-title="Demo: Teach" data-background-color="#FFFFFF">
+<h2></h2>
+<script src="https://fast.wistia.com/embed/medias/wio54r4pd1.jsonp" async=""></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_wio54r4pd1 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/wio54r4pd1/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;"></div></div></div></div>
+<aside class="notes">
+<p>For learning:</p>
+<ul>
+<li>RStudio comes with everything, no additional install needed</li>
+<li>visual editor – Julie will say more</li>
+<li>code-link</li>
+<li>yaml errors</li>
+</ul>
+<p>For teaching:</p>
+<ul>
+<li>revealjs</li>
+<li>Show hamburger menu outline and print to PDF</li>
+<li>chalkboard</li>
+<li>multiplex: Slides / scroll for audience</li>
+<li>execute &gt; echo: true</li>
+<li>Add code line highlighting to plotting chunk</li>
+</ul>
+<p>Features that are useful for research:</p>
+<ul>
+<li>quarto journals</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-öğrenme-eğrisini-düzleştiriyor" class="slide level2 takeaway center">
+<h2>Quarto, öğrenme eğrisini düzleştiriyor</h2>
+
+<img data-src="images/3-teach/many-qmd-to-output.png" style="width:70.0%" alt="Bir HTML, PDF veya Word belgesi veya daha fazlasını oluşturmak için Quarto'dan geçen birçok qmd dosyasını gösteren bir şematik. Quarto logosu, bir penguenin döndüğü bir beyzbol topu olarak tasvir edilmiştir.." class="r-stretch quarto-figure-center"><aside class="notes">
+<p>Dolayısıyla, öğretimle ilgili olarak, öğrencilerin projeleri büyüdükçe tırmanmaları gereken çok daha az dik bir yokuştan bahsetmiştim. Quarto ile öğretmenliğe başladığımda düşündüğüm bir şey olmadığı için bunun hoş bir sürpriz olduğunu da söyledim. Ancak geriye dönüp bakıldığında bu tesadüf değildi. Quarto’nun tutarlı alıntı sözdizimi, hesaplamaların ne zaman çalıştırılması veya yeniden çalıştırılması gerektiği konusunda daha kasıtlı kontrol ve girdileri, düzenleri, temaları vb. kontrol eden tek bir minimum yaml gibi özellikleri, bu öğrenme eğrisini düzleştirmeye katkıda bulunur.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-öğrencilerle-birlikte-büyüyebilir" class="slide level2 takeaway center">
+<h2>Quarto, öğrencilerle birlikte büyüyebilir</h2>
+<p><br></p>
+<div class="fragment fade-up">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/3-teach/many-lang-qmd-to-output.png" alt="Bir HTML, PDF veya Word belgesi veya daha fazlasını oluşturmak için birçok bilgi işlem dilini (R, Python, Julia, Observable ve daha fazlası) birçok tek qmd dosyasına giren, Quarto'dan geçen şematik. Quarto logosu, bir penguenin döndüğü bir beyzbol topu olarak tasvir edilmiştir."></p>
+</figure>
+</div>
+</div>
+<aside class="notes">
+<p>Quarto ile kolayca büyüyen ve çalışmalarının kapsamını genişleten öğrenicilerin ötesinde, Quarto da onlarla derin bir şekilde büyüyebilir.</p>
+<p>–&gt; Quarto’nun dilden ve yazma aracından bağımsız olması, insanlara Quarto’yu veri bilimi yolculuklarında, yolculuk onları nereye götürürse götürsün yanlarında götürme fırsatı sunar. Demek istediğim.. Quarto’da iş başında görmek için sonunda Python’u öğrenmek beni neredeyse cezbediyor. Ama tanıdığım kişi Python öğreniyor, Julia ve diğer diller benim Bilgisayar Bilimi kurslarındaki öğrencilerim. Kursumda Quarto’yu kullanarak RStudio’da R öğrenebileceklerini ve ardından Quarto in Jupyter’ı CS kurslarında kullanmaya devam edebileceklerini hayal etmek… Bu bana çok parlak bir gelecek gibi geliyor!</p>
+<p><strong>[Pause]</strong> Ve parlak bir gelecek, henüz hayal bile edemediğimiz şeyleri içerir.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="reimagine" class="title-slide slide level1 title-top-ice center" data-background-image="images/horst_quarto_penguins_reimagine.png" aria-label="Bir buzdağından okyanusa dalan iki heyecanlı penguen. Gökyüzündeki bir Quarto logosu, daldıkları suya yansır.">
+<h1>Reimagine</h1>
+<aside class="notes">
+<p>Şimdi, Quarto ile yeniden hayal kurmayı düşünmek için bir adım daha atalım.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="openscapes-intro" class="slide level2" data-menu-title="Openscapes Intro 1" data-background-color="#0F1620" data-background-image="images/horst_openscapes_champions.jpg" data-background-size="contain" data-background-position="bottom right" data-fig-alt="Bir okyanusun kenarındaki çimenli bir alanın illüstrasyonu, sağ tarafta orta yerden arka plana doğru kıvrılan bir nehir var. Arka planda dağlar var. Openscapes hex logosu sol üst köşededir. Ön planda pek çok hayvan var: dizüstü bilgisayarda tek başına çalışan keşiş yengeci, yağmur bulutu altında dizüstü bilgisayarda üzgün bir tavşan, yağmur bulutu altında dizüstü bilgisayarda hüsrana uğramış bir kokarca. Bir çalının hemen üzerinde başka bir hayvan grubu daha var: Karşılama tabelası olan bir tilki, daha büyük bir park haritasının önünde harita broşürleri tutan bir kirpi ile duruyor. Tilki ve kirpi bir grup hayvanın önündedir: balıkçıl, sincap, defter tutan fare, rakun, yılan ve bıldırcın. Ortada, nehrin yanında bir kaplumbağa, geyik, baykuş ve kunduz var, üzerinde basamaklı taş kayalar var. Bir roadrunner, kertenkele, mavi kuş ve tavşan birlikte bir yolda yürüyorlar, diğer yollardan biri bir kütük tarafından kapatılmış. Suyun kenarında bir kayık var. Arka planda bir ördek, kaplumbağa, kızıl sincap, tilki ve kuzgun nehri geçen ahşap bir köprü üzerinde tek sıra halinde yürüyorlar. Hayvanların çoğu boyunlarına renkli bandanalar bağlamış, birkaçı da şapka takmış. Gökyüzünde bir uydu var. Resmin üzerine OpenScapes onaltılı logosu yerleştirilmiştir.">
+<h2></h2>
+<aside class="notes">
+<p>Ve sizi açık bilimin geleceğini yeniden hayal etmeye davet ederken, 2018’de ortağı Erin Robinson ile birlikte Openscapes’i başlatan arkadaşım ve meslektaşım Julia Stewart Lowndes’e büyük bir saygı duruşunda bulunmak istiyorum. Açık bilimde takımlar. İnsanların sağ altta ön plandaki gibi üzgün yalnız hayvanlardan hareket etmelerine yardımcı oluyorlar, böylece bu manzarayı çok fazla ayaklar altına almadan güvenli bir şekilde keşfetmeye ve gezinmeye başlıyorlar. Openscapes’in yaptığı fantastik ve derin işi sadece birkaç ses baytında açıklamak benim için zor, bu yüzden sizinle geçen yıl Openscapes’e katılan bir deniz ekolojisti olan Ileana Fenwick’ten bir alıntı paylaşacağım.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quote-ileana-fenwick" class="slide level2" data-menu-title="Quote: Ileana Fenwick" data-background-image="images/4-reimagine/fenwick-scuba.jpg">
+<h2></h2>
+<div class="quotebox-transparent-bottom-right">
+<p>Because of Openscapes, I have renewed hope in how we can bring about a kinder future in science. I see a commitment in the open science community to bridging the gaps where we’ve left members of our community behind, and it inspires me.</p>
+<div class="quote-source">
+<p>Ileana Fenwick<br>
+University of North Carolina, Openscapes</p>
+</div>
+</div>
+<aside class="notes">
+<p>Openscapes sayesinde, bilimde nasıl daha iyi bir gelecek yaratabileceğimize dair umudumu tazeledim. Açık bilim topluluğunda, topluluğumuzun üyelerini geride bıraktığımız boşlukları doldurma taahhüdü görüyorum ve bu bana ilham veriyor.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="faylab-manual-1" class="slide level2 centered" data-menu-title="FayLab Manual 1" data-background-color="#0F1620">
+<h2></h2>
+<div class="borderbox">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://thefaylab.github.io/lab-manual"><img data-src="images/4-reimagine/faylab-labmanual.png" style="width:60.0%" alt="Paylaşılan uygulamaların laboratuvar kılavuzu olan bir Quarto sitesinin ekran görüntüsü"></a></p>
+</figure>
+</div>
+</div>
+<p><a href="https://thefaylab.github.io/lab-manual/">thefaylab.github.io/lab-manual/</a></p>
+<aside class="notes">
+<p>İşte bilimde daha kind bir geleceği nasıl oluşturabileceğimize dair pratik bir örnek. Bu Fay Lab Manual – Gavin Fay’in bir kantitatif balıkçılık ekolojisi laboratuvar grubu olan Group UMass Dartmouth tarafından oluşturulan bir site. Bu site, laboratuvar kültürü, davranış kuralları, dosyaları nasıl adlandırdıkları ve kullandıkları yazılımları nasıl öğrenecekleri hakkında bilgiler içerir. Uygulamalarını şeffaf ve net bir şekilde özetliyorlar ve insanların bu şeyleri bilerek geldiklerini veya bunları kendi başlarına çözebileceklerini varsaymıyorlar. Örtülü olanı açık hale getirir ve öğrenenleri katkıda bulunanlar olarak dahil eder. Bu harika bir uygulama çünkü veri biliminde resmi eğitim çevre bilimcileri arasında yaygın değildir ve insanlar mutlaka çeşitli becerilerle gelirler. Öyleyse, Quarto’nun öğrenicileri katkıda bulunanlar olarak kabul etme yaklaşımında rol oynayabileceği bir yolu daha gösterelim.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-faklı-kodlama-deneyimi-düzeylerindeki-bireylerin-beraber-çalışabilmesine-olanak-tanır" class="slide level2 takeaway center">
+<h2>Quarto, faklı kodlama deneyimi düzeylerindeki bireylerin<br>beraber çalışabilmesine olanak tanır</h2>
+<div class="borderbox">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/4-reimagine/visual_editor.png" style="width:70.0%" alt="RStudio IDE"></p>
+</figure>
+</div>
+</div>
+<aside class="notes">
+<p>Quarto, kodlama konfor seviyelerinde işbirliğine olanak tanır; bu, onun arkadaş canlısı bir araç olduğu ve ortak çalışma fikrimizi önemli ölçüde ve daha önce genişletebileceğimiz anlamına gelir.</p>
+<p>Quarto ve RStudio IDE’nin bunu kolaylaştırmasının bir yolu, son bir demosunu yapacağım görsel düzenleyicidir.</p>
+<p>Görsel editörün yeni öğrenenler için kolay olmasına rağmen deneyimli kullanıcılar için de harika bir araç olduğunu belirtmek isterim. Yazarlık için görsel düzenleyiciyi kullanmayı seviyorum ve size nedenini birazdan göstereceğim! Demoyu izlerken, bunu kendi başınıza nasıl kullanabileceğinizi ve ayrıca yeni bir öğrenciye veya meslektaşınıza nasıl öğretebileceğinizi düşünmenizi tavsiye ediyorum.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="demo-reimagine" class="slide level2 center" data-menu-title="Demo: Reimagine" data-background-color="#FFFFFF">
+<h2></h2>
+<script src="https://fast.wistia.com/embed/medias/jkxevpg30t.jsonp" async=""></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_jkxevpg30t videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/jkxevpg30t/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;"></div></div></div></div>
+<aside class="notes">
+<ul>
+<li>i can write and paste formatted text</li>
+<li>Add image, caption, alt text</li>
+<li>source editor</li>
+<li>citations 2 ways: @ from my Zotero, forward-slash citation for doi</li>
+<li>Also: Call-outs</li>
+<li>Add extension</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="thank-you" class="title-slide slide level1 title-top-dark center" data-background-image="images/horst_quarto_penguins_thankyou.png">
+<h1>Thank you</h1>
+<p><span class="custom-url-middle-dark"><a href="https://mine.quarto.pub/merhaba-quarto">mine.quarto.pub/merhaba-quarto</a></span></p>
+<aside class="notes">
+<p>Bu sabah, ya da cogunuz icin aksamustu, katıldığınız için çok teşekkür ederim. Bu, Quarto’ya paylaşma, işbirliği yapma, öğretme ve yeniden hayal etme perspektifinden bir girişti. Quarto’nun özelliklerinin cok kisitli bir bolumunu anlatabildim sizlere, daha ogrenecek cok sey var Quarto ile ilgili ama bu konusmada ogrendiklerinizle hemen kullanmaya baslayabilirsiniz Quarto’yu. Slidelari linkte bulabilirsiniz, be oraya gidip bir sonraki slayda geçerseniz, demolarda oluşturduğumuz sitenin kaynak kodu da dahil olmak üzere birçok yararlı kaynak bulacaksınız.</p>
+<p>Sorulara gecmeden once bir de…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="teşekkürler" class="slide level2 center centered" data-background-color="#0F1620">
+<h2>Teşekkürler</h2>
+<p><br></p>
+<p><a href="https://jules32.github.io/">Julia Stewart Lowndes, Ph.D.</a></p>
+<p><br></p>
+<p><a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Artwork</a> by <a href="https://allisonhorst.com/">Allison Horst</a></p>
+<aside class="notes">
+<p>Bu konusmanin orijinalini beraber hazirladigim Julia Stewart Lowndes’a ve illustrasyonlari yapan Allison Horst’a cok tesekkur ederim.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="say-hello-to-quarto" class="slide level2">
+<h2>Say hello to Quarto!</h2>
+<ul>
+<li><p>Pick up where we left off:</p>
+<ul>
+<li>Site: <a href="https://mine.quarto.pub/hello-quarto-demo">mine.quarto.pub/hello-quarto-demo</a></li>
+<li>Source code: <a href="https://github.com/mine-cetinkaya-rundel/hello-quarto-demo">github.com/mine-cetinkaya-rundel/hello-quarto-demo</a></li>
+</ul></li>
+<li><p>Source code for these slides: <a href="https://github.com/mine-cetinkaya-rundel/merhaba-quarto-kongregeko">github.com/mine-cetinkaya-rundel/merhaba-quarto-kongregeko</a></p></li>
+<li><p>Quarto documentation: <a href="https://quarto.org/">quarto.org</a></p></li>
+<li><p>Video: <a href="https://youtu.be/6p4vOKS6Xls">Reproducible authoring with Quarto</a></p></li>
+<li><p>Video: <a href="https://youtu.be/azVAl343CIU">Openscapes: Hello Quarto with NASA Openscapes, RLadies Santa Barbara, and JJ Allaire</a></p></li>
+<li><p>Tutorial: <a href="https://rstudio-conf-2022.github.io/get-started-quarto/">rstudio-conf-2022.github.io/get-started-quarto/</a></p></li>
+<li><p>Quarto gallery: <a href="https://quarto.org/docs/gallery/">quarto.org/docs/gallery</a></p></li>
+<li><p>Quarto tip a day: <a href="https://rstd.io/quartotip">rstd.io/quartotip</a></p></li>
+</ul>
+
+<img data-src="images/horst-quarto-penguins.png" alt="Two penguins. The orange one is holding the Quarto logo. The blue one is looking at the orange one." width="600" class="r-stretch quarto-figure-right"><div class="footer footer-default">
+
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="index_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'multiplex': {"secret":null,"id":"5c65e070c8fa5125","url":"https://reveal-multiplex.glitch.me/"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

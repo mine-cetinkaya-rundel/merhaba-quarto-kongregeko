@@ -1,0 +1,75 @@
+# Reimagine {.title-top-ice background-image="images/horst_quarto_penguins_reimagine.png" aria-label="Bir buzdağından okyanusa dalan iki heyecanlı penguen. Gökyüzündeki bir Quarto logosu, daldıkları suya yansır."}
+
+::: notes
+Şimdi, Quarto ile yeniden hayal kurmayı düşünmek için bir adım daha atalım.
+:::
+
+##  {#openscapes-intro data-menu-title="Openscapes Intro 1" background-color="#0F1620" background-image="images/horst_openscapes_champions.jpg" background-size="contain" background-position="bottom right" fig-alt="Bir okyanusun kenarındaki çimenli bir alanın illüstrasyonu, sağ tarafta orta yerden arka plana doğru kıvrılan bir nehir var. Arka planda dağlar var. Openscapes hex logosu sol üst köşededir. Ön planda pek çok hayvan var: dizüstü bilgisayarda tek başına çalışan keşiş yengeci, yağmur bulutu altında dizüstü bilgisayarda üzgün bir tavşan, yağmur bulutu altında dizüstü bilgisayarda hüsrana uğramış bir kokarca. Bir çalının hemen üzerinde başka bir hayvan grubu daha var: Karşılama tabelası olan bir tilki, daha büyük bir park haritasının önünde harita broşürleri tutan bir kirpi ile duruyor. Tilki ve kirpi bir grup hayvanın önündedir: balıkçıl, sincap, defter tutan fare, rakun, yılan ve bıldırcın. Ortada, nehrin yanında bir kaplumbağa, geyik, baykuş ve kunduz var, üzerinde basamaklı taş kayalar var. Bir roadrunner, kertenkele, mavi kuş ve tavşan birlikte bir yolda yürüyorlar, diğer yollardan biri bir kütük tarafından kapatılmış. Suyun kenarında bir kayık var. Arka planda bir ördek, kaplumbağa, kızıl sincap, tilki ve kuzgun nehri geçen ahşap bir köprü üzerinde tek sıra halinde yürüyorlar. Hayvanların çoğu boyunlarına renkli bandanalar bağlamış, birkaçı da şapka takmış. Gökyüzünde bir uydu var. Resmin üzerine OpenScapes onaltılı logosu yerleştirilmiştir."}
+
+::: notes
+Ve sizi açık bilimin geleceğini yeniden hayal etmeye davet ederken, 2018'de ortağı Erin Robinson ile birlikte Openscapes'i başlatan arkadaşım ve meslektaşım Julia Stewart Lowndes'e büyük bir saygı duruşunda bulunmak istiyorum. Açık bilimde takımlar.
+İnsanların sağ altta ön plandaki gibi üzgün yalnız hayvanlardan hareket etmelerine yardımcı oluyorlar, böylece bu manzarayı çok fazla ayaklar altına almadan güvenli bir şekilde keşfetmeye ve gezinmeye başlıyorlar.
+Openscapes'in yaptığı fantastik ve derin işi sadece birkaç ses baytında açıklamak benim için zor, bu yüzden sizinle geçen yıl Openscapes'e katılan bir deniz ekolojisti olan Ileana Fenwick'ten bir alıntı paylaşacağım.
+:::
+
+##  {#quote-ileana-fenwick data-menu-title="Quote: Ileana Fenwick" background-image="images/4-reimagine/fenwick-scuba.jpg"}
+
+::: quotebox-transparent-bottom-right
+Because of Openscapes, I have renewed hope in how we can bring about a kinder future in science. I see a commitment in the open science community to bridging the gaps where we've left members of our community behind, and it inspires me.
+
+::: quote-source
+Ileana Fenwick\
+University of North Carolina, Openscapes
+:::
+:::
+
+::: notes
+Openscapes sayesinde, bilimde nasıl daha iyi bir gelecek yaratabileceğimize dair umudumu tazeledim. Açık bilim topluluğunda, topluluğumuzun üyelerini geride bıraktığımız boşlukları doldurma taahhüdü görüyorum ve bu bana ilham veriyor.
+:::
+
+##  {#faylab-manual-1 data-menu-title="FayLab Manual 1" background-color="#0F1620" .centered}
+
+::: borderbox
+[![](images/4-reimagine/faylab-labmanual.png){width="60%" fig-alt="Paylaşılan uygulamaların laboratuvar kılavuzu olan bir Quarto sitesinin ekran görüntüsü"}](https://thefaylab.github.io/lab-manual)
+::: 
+
+[thefaylab.github.io/lab-manual/](https://thefaylab.github.io/lab-manual/)
+
+::: notes
+İşte bilimde daha kind bir geleceği nasıl oluşturabileceğimize dair pratik bir örnek.
+Bu Fay Lab Manual -- Gavin Fay'in bir kantitatif balıkçılık ekolojisi laboratuvar grubu olan Group UMass Dartmouth tarafından oluşturulan bir site.
+Bu site, laboratuvar kültürü, davranış kuralları, dosyaları nasıl adlandırdıkları ve kullandıkları yazılımları nasıl öğrenecekleri hakkında bilgiler içerir.
+Uygulamalarını şeffaf ve net bir şekilde özetliyorlar ve insanların bu şeyleri bilerek geldiklerini veya bunları kendi başlarına çözebileceklerini varsaymıyorlar.
+Örtülü olanı açık hale getirir ve öğrenenleri katkıda bulunanlar olarak dahil eder.
+Bu harika bir uygulama çünkü veri biliminde resmi eğitim çevre bilimcileri arasında yaygın değildir ve insanlar mutlaka çeşitli becerilerle gelirler.
+Öyleyse, Quarto'nun öğrenicileri katkıda bulunanlar olarak kabul etme yaklaşımında rol oynayabileceği bir yolu daha gösterelim.
+:::
+
+## Quarto, faklı kodlama deneyimi düzeylerindeki bireylerin<br>beraber çalışabilmesine olanak tanır {.takeaway .center}
+
+::: borderbox
+![](images/4-reimagine/visual_editor.png){fig-align="center" width="70%" fig-alt="RStudio IDE"}
+:::
+
+::: notes
+Quarto, kodlama konfor seviyelerinde işbirliğine olanak tanır; bu, onun arkadaş canlısı bir araç olduğu ve ortak çalışma fikrimizi önemli ölçüde ve daha önce genişletebileceğimiz anlamına gelir.
+
+Quarto ve RStudio IDE'nin bunu kolaylaştırmasının bir yolu, son bir demosunu yapacağım görsel düzenleyicidir.
+
+Görsel editörün yeni öğrenenler için kolay olmasına rağmen deneyimli kullanıcılar için de harika bir araç olduğunu belirtmek isterim. Yazarlık için görsel düzenleyiciyi kullanmayı seviyorum ve size nedenini birazdan göstereceğim! Demoyu izlerken, bunu kendi başınıza nasıl kullanabileceğinizi ve ayrıca yeni bir öğrenciye veya meslektaşınıza nasıl öğretebileceğinizi düşünmenizi tavsiye ediyorum.
+:::
+
+##  {#demo-reimagine .center data-menu-title="Demo: Reimagine" background-color="#FFFFFF"}
+
+```{=html}
+<script src="https://fast.wistia.com/embed/medias/jkxevpg30t.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_jkxevpg30t videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/jkxevpg30t/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+```
+
+::: notes
+-   i can write and paste formatted text
+-   Add image, caption, alt text
+-   source editor
+-   citations 2 ways: \@ from my Zotero, forward-slash citation for doi
+-   Also: Call-outs
+-   Add extension
+:::

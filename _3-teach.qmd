@@ -1,0 +1,152 @@
+# Teach {.title-middle-ice background-image="images/horst_quarto_penguins_teach.png" aria-label="Buzdan yapılmış bir odada pencereden dışarı bakan iki penguen. Penguenlerden biri işaretçi olarak bir buz saçağı tutuyor ve gökyüzündeki Quarto logosuna sahip ayı işaret ederken, diğer penguen bakıyor."}
+
+::: notes
+Son on yılda, R Markdown'a öğretmeyi çok sevdim.
+Öğrencilerin Örgü düğmesine bastıklarında, kodlarının ve metinlerinin bir araya geldiğini gördüklerinde inanılmaz bir şey oluyor -- bu ilk kez sınıfta sık sık bir "vay canına, bu harika" sesini duyabilirsiniz.
+Ayrıca bunun, giriş kursunun ilk gününde kolayca öğrenebilecekleri bir araç olması ve istatistiksel ve hesaplamalı uzmanlıkları arttıkça onlarla birlikte gelişmesi de hoşuma gitti.
+Bununla birlikte, öğrencilerin bu alanlardaki uzmanlıkları arttıkça, hesaplama daha yoğun kaynak gerektirir (ve hatta bazen birden fazla dili içerir) ve ihtiyaçlarını desteklemek için belirli günlük stillerinde PDF'ler veya birden çok bölümden oluşan bir tez gibi farklı çıktı biçimlerine ihtiyaç duyarlar. .
+Quarto ile öğretimde hoş bir sürpriz, tek, basit belgeden çok belgeli projelere bu geçişi yapmak için öğrenme eğrisinin ne kadar daha az dik olduğu olmuştur.
+Size tez öğrencilerimden birinin hikayesini anlatmak isterim
+:::
+
+##  {#holland-stam-thesis-1 .center data-menu-title="Quantifying Art Historical Narratives 1" background-color="#0F1620"}
+
+::: columns
+::: {.column width="45%"}
+::: {style="text-align: right; padding-right:1em;"}
+::: {style="font-size: 1.5em;"}
+**Quantifying**<br>Art Historical<br>Narratives
+:::
+
+<br>
+
+::: {.midi style="font-size: 1.5em; color: #75AADB;"}
+Holland Stam
+:::
+
+Art History +<br> Visual and Media Studies
+
+Class of 2022
+
+Duke University
+:::
+:::
+
+::: {.column width="45%"}
+![](images/3-teach/holland-stam.png){fig-alt="Broadhead Center'da bir masada çalışan ve bir girişi cetvelle ölçen Holland." fig-align="left" width="600"}
+:::
+:::
+
+::: notes
+Geçen bahar doneminde, Holland Stam adında oldukça qualitative bir araştırma projesi üzerinde çalışan bir sanat tarihi öğrencim vardı.
+Tezinde, temel sanat tarihi kitaplarında farklı cinsiyet ve etnik gruplardan sanatçıların temsili ve bu temsilin baskılar yoluyla nasıl değiştiği araştırıldı.
+Daha önce bir sanat tarihi dersi aldıysanız, onlara aşina olabilirsiniz: Garner'ın Çağlar Boyunca Sanatı ve Janson'ın Sanat Tarihi.
+Ders kitaplarının her birinin sayısız baskısından titizlikle veri topladı ve her bir sanat eserine ne kadar yer verildiğini sayfa sayfa ölçtü ve bunu sanatçılara ilişkin demografik bilgilerle birleştirdi.
+Regresyon kursumda Holland ile tanıştığımda, arka plan olarak R Markdown'u öğrendiği yalnızca bir sömestr veri bilimi vardı ve ardından sınıfımdaki kursun bir parçası olarak Quarto'yu kullanmaya başladı.
+Her iki sınıfta da hesaplamalı belgelerle ilgili deneyimi, ödev başına tek bir belgeyle, verileri analiz etmek için biraz kod yazmakla ve ardından bulguları yorumlamak için biraz metin yazmakla sınırlıydı.
+Bir anlamda tezi de tam olarak bunu gerektiriyordu ama elbette dahası da vardı.
+Birden çok bölüm, sanat tarihçilerinin kullandığı çok özel bir stilde milyonlarca alıntı, altyazılı şekiller ve tablolar ve her küçük düzenlemede tüm tez kodunu yeniden çalıştırmak zorunda kalmamak.
+Biraz Googling ve biraz da benim yardımımla, Quarto'da yazılmış tezinin bölümlerini bir yaml dosyasıyla nasıl bir araya getireceğini oldukça hızlı bir şekilde anladı ve voiola!
+Quarto'da yazılmış bir tezi vardı.
+Elbette, bu biraz deneme yanılma ve zaman zaman hayal kırıklığı gerektirdi, ancak rakamları oluştururken kodla altyazı yazabilmesi ve manuel metin stili olmadan alıntılar ekleyebilmesi onu sattı!
+Öğrencilerinizin onlara öğrettiklerinizi zorladıklarını ve onları problemlerini çözmek için kullandıklarını görmek her zaman çok iç açıcıdır, özellikle öğrettiğiniz yeni bir şeyde henüz aktif gelişim aşamasındayken bunun olması özellikle yüreklendiricidir. !
+:::
+
+##  {#holland-stam-thesis-2 .center data-menu-title="Quantifying Art Historical Narratives 2" background-color="#0F1620"}
+
+::: columns
+::: {.column width="45%"}
+::: {style="text-align: right; padding-right:1em;"}
+::: {style="font-size: 1.5em;"}
+**Quantifying**<br>Art Historical<br>Narratives
+:::
+
+<br>
+
+::: {.midi style="font-size: 1.5em; color: #75AADB;"}
+Holland Stam
+:::
+
+Art History +<br> Visual and Media Studies
+
+Class of 2022
+
+Duke University
+
+*with Sara Lemus* ![](images/3-teach/arthistory.png){width="150" fig-alt="arthistory paketi için hex logo."}
+:::
+:::
+
+::: {.column width="45%"}
+![](images/3-teach/holland-stam.png){fig-alt="Broadhead Center'da bir masada çalışan ve bir girişi cetvelle ölçen Holland." fig-align="left" width="600"}
+:::
+:::
+
+::: notes
+Ve bu arada, verilerle ilgileniyorsanız, Holland ve benim başka bir öğrencim, Sara Lemus, onu "sanat tarihi" olarak paketlediler.
+Sara, R ile çok daha fazla deneyime sahip bir istatistik uzmanı ve paket geliştirme hakkında bilgi edinmek için sürdürdüğüm bazı veri paketlerini güncellemek için benimle birlikte çalışıyordu.
+Laboratuar toplantılarımız sırasında Holland'ın teziyle ilgilendi ve yeni edindikleri beceriler ve coşkuyla ikisinin bir araya gelip verileri daha fazla araştırmacının kullanımına sunması, paketleyip CRAN'a alması gerektiği açıktı!
+
+Ama Quarto'ya dönersek... Hollanda'da olduğu gibi, Quarto da bir eğitmen olarak birçok sorunuma basit ama etkili çözümler sağladı.
+Size onlardan bahsetmek yerine, size göstereyim!
+:::
+
+##  {#demo-teach .centered data-menu-title="Demo: Teach" background-color="#FFFFFF"}
+
+```{=html}
+<script src="https://fast.wistia.com/embed/medias/wio54r4pd1.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_wio54r4pd1 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/wio54r4pd1/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+```
+
+::: notes
+For learning:
+
+-   RStudio comes with everything, no additional install needed
+-   visual editor -- Julie will say more
+-   code-link
+-   yaml errors
+
+For teaching:
+
+-   revealjs
+-   Show hamburger menu outline and print to PDF
+-   chalkboard
+-   multiplex: Slides / scroll for audience
+-   execute > echo: true
+-   Add code line highlighting to plotting chunk
+
+Features that are useful for research: 
+
+- quarto journals
+:::
+
+## Quarto, öğrenme eğrisini düzleştiriyor {.takeaway .center}
+
+![](images/3-teach/many-qmd-to-output.png){width="70%" fig-alt="Bir HTML, PDF veya Word belgesi veya daha fazlasını oluşturmak için Quarto'dan geçen birçok qmd dosyasını gösteren bir şematik. Quarto logosu, bir penguenin döndüğü bir beyzbol topu olarak tasvir edilmiştir.." fig-align="center"}
+
+::: notes
+Dolayısıyla, öğretimle ilgili olarak, öğrencilerin projeleri büyüdükçe tırmanmaları gereken çok daha az dik bir yokuştan bahsetmiştim.
+Quarto ile öğretmenliğe başladığımda düşündüğüm bir şey olmadığı için bunun hoş bir sürpriz olduğunu da söyledim.
+Ancak geriye dönüp bakıldığında bu tesadüf değildi.
+Quarto'nun tutarlı alıntı sözdizimi, hesaplamaların ne zaman çalıştırılması veya yeniden çalıştırılması gerektiği konusunda daha kasıtlı kontrol ve girdileri, düzenleri, temaları vb. kontrol eden tek bir minimum yaml gibi özellikleri, bu öğrenme eğrisini düzleştirmeye katkıda bulunur.
+:::
+
+## Quarto, öğrencilerle birlikte büyüyebilir {.takeaway .center}
+
+<br>
+
+::: {.fragment .fade-up}
+![](images/3-teach/many-lang-qmd-to-output.png){fig-alt="Bir HTML, PDF veya Word belgesi veya daha fazlasını oluşturmak için birçok bilgi işlem dilini (R, Python, Julia, Observable ve daha fazlası) birçok tek qmd dosyasına giren, Quarto'dan geçen şematik. Quarto logosu, bir penguenin döndüğü bir beyzbol topu olarak tasvir edilmiştir." fig-align="center"}
+:::
+
+::: notes
+Quarto ile kolayca büyüyen ve çalışmalarının kapsamını genişleten öğrenicilerin ötesinde, Quarto da onlarla derin bir şekilde büyüyebilir.
+
+--> Quarto'nun dilden ve yazma aracından bağımsız olması, insanlara Quarto'yu veri bilimi yolculuklarında, yolculuk onları nereye götürürse götürsün yanlarında götürme fırsatı sunar.
+Demek istediğim..
+Quarto'da iş başında görmek için sonunda Python'u öğrenmek beni neredeyse cezbediyor.
+Ama tanıdığım kişi Python öğreniyor, Julia ve diğer diller benim Bilgisayar Bilimi kurslarındaki öğrencilerim.
+Kursumda Quarto'yu kullanarak RStudio'da R öğrenebileceklerini ve ardından Quarto in Jupyter'ı CS kurslarında kullanmaya devam edebileceklerini hayal etmek... Bu bana çok parlak bir gelecek gibi geliyor!
+
+**\[Pause\]** Ve parlak bir gelecek, henüz hayal bile edemediğimiz şeyleri içerir.
+
+:::
